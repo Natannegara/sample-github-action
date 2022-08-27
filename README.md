@@ -14,5 +14,5 @@ Checking in your node_modules directory can cause problems. As an alternative, y
 
 5. If you already checked in your node_modules directory, remove it. rm -rf node_modules/*
 
-6. From your terminal, commit the updates to your action.yml, dist/index.js, and node_modules files.
+6. From your terminal, commit the updates to your action.yml, dist/index.js, and node_modules files..
 ```
