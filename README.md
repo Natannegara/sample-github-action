@@ -16,3 +16,10 @@ Checking in your node_modules directory can cause problems. As an alternative, y
 
 6. From your terminal, commit the updates to your action.yml, dist/index.js, and node_modules files..
 ```
+
+```
+git add .
+git commit -m "message"
+git tag -a -m "message" v0.1
+git push --follow-tags
+```
