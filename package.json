@@ -1,0 +1,24 @@
+{
+  "name": "sample-github-action",
+  "version": "1.0.0",
+  "description": "personal use purposes",
+  "main": "sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Natannegara/sample-github-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Natannegara/sample-github-action/issues"
+  },
+  "homepage": "https://github.com/Natannegara/sample-github-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/github": "^5.0.3"
+  }
+}
