@@ -12390,20 +12390,49 @@ const axios = __nccwpck_require__(3328);
 //     core.setFailed(error.message);
 // }
 
-axios({
-    method: 'post',
-    url: 'http://localhost/api/v2/job_templates/9/launch/',
-    headers:{
-        Authorization: "Basic ZGV2ZWxvcGVyOk40dDRuM2c0cjQ=" 
-    }
-})
-    .then(response => {
-        console.log(response.data.url);
-        console.log(response.data.explanation)
+try {
+
+    // const username = core.getInput('username');
+    // const password = core.getInput('password');
+    const username = core.getInput('admin');
+    const password = core.getInput('admin');
+    const buff = new Buffer(`${username}:${password}`, 'utf8');
+    const auth64 = buff.toString('base64');
+
+    axios({
+        method: 'post',
+        url: 'http://localhost/api/v2/job_templates/9/launch/',
+        headers:{
+            Authorization: `Basic ${auth64}`
+        }
     })
-    .catch(err => {
-        console.log(err)
-    })
+        .then(res => {
+            console.log(response.data);
+            // console.log(response.data.explanation)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+} catch (error) {
+    core.setFailed(error.message);
+    
+}
+
+// axios({
+//     method: 'post',
+//     url: 'http://localhost/api/v2/job_templates/9/launch/',
+//     headers:{
+//         Authorization: "Basic ZGV2ZWxvcGVyOk40dDRuM2c0cjQ=" 
+//     }
+// })
+//     .then(response => {
+//         console.log(response.data.url);
+//         console.log(response.data.explanation)
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
 
 
 

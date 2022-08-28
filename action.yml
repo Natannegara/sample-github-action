@@ -1,10 +1,12 @@
-name: 'Sample GithubAction'
+name: 'Authentication and trigger AWX Job'
 description: 'personal use purposes'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  username:  
+    description: 'username for ansible AWX authentication'
     required: true
-    default: 'World'
+  password:
+    description: 'password for ansible AWX authentication'
+    required: true
 outputs:
   time: # id of output
     description: 'The time we greeted you'
