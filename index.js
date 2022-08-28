@@ -19,7 +19,11 @@ const axios = require('axios');
 //     core.setFailed(error.message);
 // }
 
-axios.post('http://localhost/api/v2/job_templates/9/github/')
+axios.post('http://localhost/api/v2/job_templates/9/launch/', {
+    headers: {
+        Authorization: "Basic ZGV2ZWxvcGVyOk40dDRuM2c0cjQ=" 
+    }
+})
     .then(response => {
         console.log(response.data.url);
         console.log(response.data.explanation)
