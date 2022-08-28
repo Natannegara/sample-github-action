@@ -12390,7 +12390,13 @@ const axios = __nccwpck_require__(3328);
 //     core.setFailed(error.message);
 // }
 
-axios.post('http://localhost/api/v2/job_templates/9/github/')
+axios({
+    method: 'post',
+    url: 'http://localhost/api/v2/job_templates/9/launch/',
+    headers:{
+        Authorization: "Basic ZGV2ZWxvcGVyOk40dDRuM2c0cjQ=" 
+    }
+})
     .then(response => {
         console.log(response.data.url);
         console.log(response.data.explanation)

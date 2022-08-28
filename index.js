@@ -19,8 +19,10 @@ const axios = require('axios');
 //     core.setFailed(error.message);
 // }
 
-axios.post('http://localhost/api/v2/job_templates/9/launch/', {
-    headers: {
+axios({
+    method: 'post',
+    url: 'http://localhost/api/v2/job_templates/9/launch/',
+    headers:{
         Authorization: "Basic ZGV2ZWxvcGVyOk40dDRuM2c0cjQ=" 
     }
 })
